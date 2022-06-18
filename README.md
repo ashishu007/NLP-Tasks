@@ -1,6 +1,6 @@
 # NLP-Tasks
 
-## Check 1
+## Brief Description
 
 Various NLP tasks using Huggingface and Flask. Right now, the app supports only three tasks:
 
@@ -16,45 +16,58 @@ Contributions are most welcome.
 
 ## Usage
 
-1. Clone the repo: 
-    `git clone https://github.com/ashishu007/NLP-Tasks.git`
+0. Clone the repo: 
+    ```bash
+    git clone https://github.com/ashishu007/NLP-Tasks.git
+    ```
 
-2. Navigate into the downloaded repo:
-    `cd NLP-Tasks`
+### With Docker
 
-3. Install the required dependencies:
-    `pip install -r requirements.txt`
+1. Run with docker-composer
+    ```bash
+    docker-compose up
+    ```
+### Without Docker
 
-4. Run the flask-app:
+1. Navigate into the downloaded repo:
+    ```bash
+    cd NLP-Tasks/flask
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the flask-app:
 
     * Windows Powershell:
-        `$env:FLASK_APP="app.py"`
-        `flask run`
+        ```bash
+        $env:FLASK_APP="app.py"
+        flask run
+        ```
 
     * Linux:
-        `export FLASK_APP=app.py`
-        `flask run`
+        ```bash
+        export FLASK_APP=app.py
+        flask run
+        ```
 
-## Notes
+### Main Screen
 
-* The app is tested on Windows only. If you're using other OS and encounter any problem, please raise an issue.
+<details><summary>A screenshot of main screen</summary>
 
-* I tried deploying the app to Heroku in two ways, got problem in both:
+![main screen](./images/main_screen_ss.png) 
 
-    * Using Docker: dependecy issues with `transformers` library.
+</details>
 
-    * Direct Flask with git: size limit increased because of the `transformers` library's requirements, which are, some pre-trained models and full `PyTorch` library.
 
 ## Contributions
 
-Right now, the most important contribution that can be made to this repo are:
-
-1. Reduce the inference time, currently its two high (around 10 seconds for question answering task).
-
-2. Deploy the app to any hosting site such as heroku, AWS, or Azure.
-
-3. Add more NLP tasks to the app.
+1. Add more tasks
+2. Improve the user-interface
 
 ## Acknowledgement
 
-[Huggingface's transformers](https://huggingface.co/transformers/) library has revolutionised the way state-of-the-art NLP models are being used in real-world. Without, this library, the app made here would have taken tremendous amount of work (compared to what it took rn, just an hour). :)
+[Huggingface's transformers](https://huggingface.co/transformers/) library has revolutionised the way state-of-the-art NLP models are being used in real-world. Without, this library, the app made here would have taken tremendous amount of work (compared to what it took rn). :)
+
