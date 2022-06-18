@@ -1,5 +1,9 @@
 # NLP-Tasks
 
+## Web Hosting
+
+* Access the app deployed on DigitalOcean: [http://178.128.39.191:8282](http://178.128.39.191:8282)
+
 ## Brief Description
 
 Various NLP tasks using Huggingface and Flask. Right now, the app supports only three tasks:
